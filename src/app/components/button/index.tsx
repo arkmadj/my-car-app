@@ -1,5 +1,8 @@
 import React from "react";
 
-export function Button(){
-   
+interface IButtonProps {
+	theme: "filled" | "outlined";
+  text: string
 }
+
+export function Button(props: IButtonProps) {}
