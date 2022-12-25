@@ -106,7 +106,7 @@ export function TopSection() {
 				<Slogan>Rent The Best Quality Cars With Us</Slogan>
 				<Description>
 					Always choose the best cars from our local stores or order it online
-					at the best prices for you and get the best quality cars for as long
+					at the best prices for you and get the best kuality cars for as long
 					as you like
 				</Description>
 			</LeftContainer>
