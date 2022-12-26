@@ -11,7 +11,7 @@ const CardContainer = styled.div`
 `;
 
 const ItemContainer = styled.div`
-	${tw`flex`}
+	${tw`flex items-center `}
 `;
 
 const Icon = styled.span`
@@ -23,6 +23,8 @@ const Name = styled.span`
 `
 
 const LineSeperator = styled.span`
+  width: 2px;
+  height: 45%;
   ${tw`mx-2 bg-gray-300 md:mx-5`}
 `
 export function BookCard() {
