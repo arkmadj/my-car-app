@@ -10,8 +10,12 @@ const ItemContainer = styled.div`
 	${tw`flex`}
 `;
 
-const Icon = styled.div`
+const Icon = styled.span`
   ${tw`mr-1 text-xs text-red-500 fill-current md:text-base md:mr-3`}
+`
+
+const Name = styled.span`
+  ${tw`text-xs text-gray-600 md:text-sm`}
 `
 
 export function BookCard() {}
