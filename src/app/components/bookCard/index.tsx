@@ -9,7 +9,7 @@ import { Marginer } from "../marginer";
 const CardContainer = styled.div`
   min-height: 4.3em;
   box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);
-	${tw`flex items-center justify-center px-2 py-1 bg-white rounded-md md:px-6 md:py-2`}
+	${tw`flex items-center justify-center px-2 py-1 bg-white rounded-md md:px-9 md:py-2`}
 `;
 
 const ItemContainer = styled.div`
