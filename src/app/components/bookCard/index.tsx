@@ -18,4 +18,7 @@ const Name = styled.span`
   ${tw`text-xs text-gray-600 md:text-sm`}
 `
 
+const LineSeperator = styled.span`
+  ${tw`mx-2 bg-gray-300 md:mx-5`}
+`
 export function BookCard() {}
