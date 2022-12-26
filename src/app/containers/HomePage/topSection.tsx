@@ -8,8 +8,8 @@ import { SCREENS } from "../../components/responsive";
 import { Button } from "../../components/button";
 
 const TopSectionContainer = styled.div`
-  min-height: 400px;
-  margin-top: 6em;
+	min-height: 400px;
+	margin-top: 6em;
 	${tw`flex justify-between w-full px-3 max-w-screen-2xl lg:px-12`}
 `;
 
@@ -94,10 +94,14 @@ const StandaloneCar = styled.div`
 	}
 
 	@media (min-width: ${SCREENS.xl}) {
-		height:  30em;
+		height: 30em;
 		right: -13em;
 		top: -9em;
 	}
+`;
+
+const ButtonContainer = styled.div`
+	${tw`flex mt-4`}
 `;
 
 export function TopSection() {
@@ -110,8 +114,10 @@ export function TopSection() {
 					at the best prices for you and get the best quality cars for as long
 					as you like
 				</Description>
-        <Button text="Rent car"/>
-        <Button theme="filled" text="Sell car"/>
+				<ButtonContainer>
+					<Button text="Rent a car" />
+					<Button theme="filled" text="Sell a car" />
+				</ButtonContainer>
 			</LeftContainer>
 			<RightContainer>
 				<BlobContainer>
