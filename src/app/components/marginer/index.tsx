@@ -1,3 +1,6 @@
 import React from "react";
 
-export interface
+export interface IMarginerProps {
+  margin: number | string;
+  direction?: "horizontal" | "vertical"
+}
