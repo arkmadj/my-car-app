@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import tw from "twin.macro";
 import { Button } from "../button";
 import { Marginer } from "../marginer";
@@ -9,6 +9,7 @@ import { Marginer } from "../marginer";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { SCREENS } from "../responsive";
 
 const CardContainer = styled.div`
 	min-height: 4.3em;
@@ -25,8 +26,8 @@ const Icon = styled.span`
 `;
 
 const SmallIcon = styled.span`
-  ${tw`ml-1 text-xs text-gray-500 fill-current md:text-base`}
-`
+	${tw`ml-1 text-xs text-gray-500 fill-current md:text-base`}
+`;
 
 const Name = styled.span`
 	${tw`text-xs text-gray-600 cursor-pointer select-none md:text-sm`}
@@ -38,12 +39,22 @@ const LineSeperator = styled.span`
 	${tw`mx-2 bg-gray-300 md:mx-5`}
 `;
 
-const DateCalendar = styled(Calendar)`
-  user-select: none;
+const DateCalendar = styled(Calendar)<{ offset?: boolean }>`
+	user-select: none;
 	position: absolute;
 	max-width: none;
 	top: 3.5em;
-	left: -2em;
+	left: 0;
+	${({ offset }) =>
+		offset &&
+		css`
+			left: -7.35em;
+		`}
+
+	@media (min-width: ${SCREENS.md}) {
+		top: 3.5em;
+		left: -2em;
+	}
 `;
 export function BookCard() {
 	const [startDate, setStartDate] = useState<Date>(new Date());
@@ -53,12 +64,12 @@ export function BookCard() {
 
 	const toggleStartDateCalendar = () => {
 		setStartDateOpen(!isStartDateOpen);
-    if(isReturnDateOpen) setReturnDateOpen(false)
+		if (isReturnDateOpen) setReturnDateOpen(false);
 	};
 
 	const toggleReturnDateCalendar = () => {
 		setReturnDateOpen(!isReturnDateOpen);
-    if(isStartDateOpen) setStartDateOpen(false)
+		if (isStartDateOpen) setStartDateOpen(false);
 	};
 
 	return (
@@ -68,9 +79,9 @@ export function BookCard() {
 					<FontAwesomeIcon icon={faCalendarAlt} />
 				</Icon>
 				<Name onClick={toggleStartDateCalendar}>Pick up date</Name>
-        <SmallIcon>
-          <FontAwesomeIcon icon={isStartDateOpen ? faCaretUp : faCaretDown}/>
-        </SmallIcon>
+				<SmallIcon>
+					<FontAwesomeIcon icon={isStartDateOpen ? faCaretUp : faCaretDown} />
+				</SmallIcon>
 				{isStartDateOpen && (
 					<DateCalendar value={startDate} onChange={setStartDate} />
 				)}
@@ -81,11 +92,11 @@ export function BookCard() {
 					<FontAwesomeIcon icon={faCalendarAlt} />
 				</Icon>
 				<Name onClick={toggleReturnDateCalendar}>Return date</Name>
-        <SmallIcon>
-          <FontAwesomeIcon icon={isReturnDateOpen ? faCaretUp : faCaretDown}/>
-        </SmallIcon>
+				<SmallIcon>
+					<FontAwesomeIcon icon={isReturnDateOpen ? faCaretUp : faCaretDown} />
+				</SmallIcon>
 				{isReturnDateOpen && (
-					<DateCalendar value={returnDate} onChange={setReturnDate} />
+					<DateCalendar offset={true} value={returnDate} onChange={setReturnDate} />
 				)}
 			</ItemContainer>
 			<Marginer direction="horizontal" margin="2em" />
