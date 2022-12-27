@@ -47,10 +47,12 @@ export function BookCard() {
 
 	const toggleStartDateCalendar = () => {
 		setStartDateOpen(!isStartDateOpen);
+    if(isReturnDateOpen) setReturnDateOpen(false)
 	};
 
 	const toggleReturnDateCalendar = () => {
 		setReturnDateOpen(!isReturnDateOpen);
+    if(isStartDateOpen) setStartDateOpen(false)
 	};
 
 	return (
