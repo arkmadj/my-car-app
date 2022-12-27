@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { BookCard } from "../../components/bookCard";
+import { Marginer } from "../../components/marginer";
 import { Navbar } from "../../components/navbar";
 import { BookingSteps } from "./bookingSteps";
 import { TopSection } from "./topSection";
@@ -15,7 +16,9 @@ export function HomePage() {
 		<PageContainer>
 			<Navbar />
       <TopSection/>
+      <Marginer direction="horizontal" margin="5em"/>
       <BookCard/> 
+      <Marginer direction="horizontal" margin="5em"/>
       <BookingSteps/>
 		</PageContainer>
 	);
