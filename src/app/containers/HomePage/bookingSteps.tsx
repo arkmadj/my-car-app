@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h2`
-	${tw`text-xl font-extrabold text-black lg:text-4xl`}
+	${tw`text-3xl font-extrabold text-black lg:text-4xl`}
 `;
 
 const StepsContainer = styled.div`
@@ -18,10 +18,11 @@ const StepsContainer = styled.div`
 `;
 
 const StepContainer = styled.div`
-	${tw`flex flex-col items-center w-16 transition-colors md:w-96 hover:text-red-500`}
+	${tw`flex flex-col items-center m-3 transition-colors md:w-96 hover:text-red-500`}
 `;
 
 const Step = styled.div`
+box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);
 	${tw`flex items-center justify-center p-6 rounded-lg`}
 `;
 
@@ -39,34 +40,43 @@ const StepIcon = styled.span`
 
 export function BookingSteps() {
 	return (
-		<StepsContainer>
-			<StepContainer>
-				<StepIcon>
-					<FontAwesomeIcon icon={faMapMarkedAlt} />
-				</StepIcon>
-				<StepTitle>Choose a location</StepTitle>
-				<StepDescription>
-					Find nearest Mycar point and book your car.
-				</StepDescription>
-			</StepContainer>
-			<StepContainer>
-				<StepIcon>
-					<FontAwesomeIcon icon={faCalendarAlt} />
-				</StepIcon>
-				<StepTitle>Pick-up date</StepTitle>
-				<StepDescription>
-					Pickup the best date to rent a car for you.
-				</StepDescription>
-			</StepContainer>
-			<StepContainer>
-				<StepIcon>
-					<FontAwesomeIcon icon={faCarSide} />
-				</StepIcon>
-				<StepTitle>Book your car </StepTitle>
-				<StepDescription>
-					Book your nice car with ease in one single click.
-				</StepDescription>
-			</StepContainer>
-		</StepsContainer>
+		<Container>
+			<Title>Our working steps</Title>
+			<StepsContainer>
+				<StepContainer>
+					<Step>
+						<StepIcon>
+							<FontAwesomeIcon icon={faMapMarkedAlt} />
+						</StepIcon>
+					</Step>
+					<StepTitle>Choose a location</StepTitle>
+					<StepDescription>
+						Find nearest Mycar point and book your car.
+					</StepDescription>
+				</StepContainer>
+				<StepContainer>
+					<Step>
+						<StepIcon>
+							<FontAwesomeIcon icon={faCalendarAlt} />
+						</StepIcon>
+					</Step>
+					<StepTitle>Pick-up date</StepTitle>
+					<StepDescription>
+						Pickup the best date to rent a car for you.
+					</StepDescription>
+				</StepContainer>
+				<StepContainer>
+					<Step>
+						<StepIcon>
+							<FontAwesomeIcon icon={faCarSide} />
+						</StepIcon>
+					</Step>
+					<StepTitle>Book your car </StepTitle>
+					<StepDescription>
+						Book your nice car with ease in one single click.
+					</StepDescription>
+				</StepContainer>
+			</StepsContainer>
+		</Container>
 	);
 }
