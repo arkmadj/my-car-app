@@ -8,6 +8,7 @@ import { Marginer } from "../marginer";
 
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 const CardContainer = styled.div`
 	min-height: 4.3em;
@@ -23,8 +24,12 @@ const Icon = styled.span`
 	${tw`mr-1 text-xs text-red-500 fill-current md:text-base md:mr-3`}
 `;
 
+const SmallIcon = styled.span`
+  ${tw`ml-1 text-xs text-gray-500 fill-current md:text-base`}
+`
+
 const Name = styled.span`
-	${tw`text-xs text-gray-600 cursor-pointer md:text-sm`}
+	${tw`text-xs text-gray-600 cursor-pointer select-none md:text-sm`}
 `;
 
 const LineSeperator = styled.span`
@@ -34,6 +39,7 @@ const LineSeperator = styled.span`
 `;
 
 const DateCalendar = styled(Calendar)`
+  user-select: none;
 	position: absolute;
 	max-width: none;
 	top: 3.5em;
@@ -62,6 +68,9 @@ export function BookCard() {
 					<FontAwesomeIcon icon={faCalendarAlt} />
 				</Icon>
 				<Name onClick={toggleStartDateCalendar}>Pick up date</Name>
+        <SmallIcon>
+          <FontAwesomeIcon icon={isStartDateOpen ? faCaretUp : faCaretDown}/>
+        </SmallIcon>
 				{isStartDateOpen && (
 					<DateCalendar value={startDate} onChange={setStartDate} />
 				)}
@@ -72,6 +81,9 @@ export function BookCard() {
 					<FontAwesomeIcon icon={faCalendarAlt} />
 				</Icon>
 				<Name onClick={toggleReturnDateCalendar}>Return date</Name>
+        <SmallIcon>
+          <FontAwesomeIcon icon={isReturnDateOpen ? faCaretUp : faCaretDown}/>
+        </SmallIcon>
 				{isReturnDateOpen && (
 					<DateCalendar value={returnDate} onChange={setReturnDate} />
 				)}
