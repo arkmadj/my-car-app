@@ -26,6 +26,9 @@ const StepTitle = styled.div`
   ${tw`mt-4 text-lg font-semibold text-black`}
 `
 
+const StepDescription = styled.p`
+  ${tw`w-10/12 text-xs text-center text-gray-600 md:text-sm`}
+`
 
 export function BookingSteps() {
 
