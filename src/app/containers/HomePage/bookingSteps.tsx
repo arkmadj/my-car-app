@@ -23,7 +23,7 @@ const Step = styled.div`
 `
 
 const StepTitle = styled.div`
-  ${tw`text-lg font-semibold text-black`}
+  ${tw`mt-4 text-lg font-semibold text-black`}
 `
 
 
