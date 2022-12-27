@@ -30,6 +30,10 @@ const StepDescription = styled.p`
   ${tw`w-10/12 text-xs text-center text-gray-600 md:text-sm`}
 `
 
+const StepIcon = styled.span`
+  ${tw`text-3xl text-red-500`}
+`
+
 export function BookingSteps() {
 
 }
