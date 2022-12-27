@@ -69,7 +69,10 @@ export function BookCard() {
 				<Icon>
 					<FontAwesomeIcon icon={faCalendarAlt} />
 				</Icon>
-				<Name>Return date</Name>
+				<Name onClick={toggleReturnDateCalendar}>Return date</Name>
+				{isReturnDateOpen && (
+					<DateCalendar value={returnDate} onChange={setReturnDate} />
+				)}
 			</ItemContainer>
 			<Marginer direction="horizontal" margin="2em" />
 			<Button text="Book ride" />
