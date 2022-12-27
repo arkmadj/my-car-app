@@ -6,6 +6,9 @@ import tw from "twin.macro";
 import { Button } from "../button";
 import { Marginer } from "../marginer";
 
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
 const CardContainer = styled.div`
   min-height: 4.3em;
   box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);
