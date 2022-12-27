@@ -1,7 +1,7 @@
+import React from "react";
 import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
 import { faCarSide, faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 
@@ -38,33 +38,35 @@ const StepIcon = styled.span`
 `;
 
 export function BookingSteps() {
-	<StepsContainer>
-		<StepContainer>
-			<StepIcon>
-				<FontAwesomeIcon icon={faMapMarkedAlt} />
-			</StepIcon>
-			<StepTitle>Choose a location</StepTitle>
-			<StepDescription>
-				Find nearest Mycar point and book your car.
-			</StepDescription>
-		</StepContainer>
-		<StepContainer>
-			<StepIcon>
-				<FontAwesomeIcon icon={faCalendarAlt} />
-			</StepIcon>
-			<StepTitle>Pick-up date</StepTitle>
-			<StepDescription>
-				Pickup the best date to rent a car for you.
-			</StepDescription>
-		</StepContainer>
-		<StepContainer>
-			<StepIcon>
-				<FontAwesomeIcon icon={faCarSide} />
-			</StepIcon>
-			<StepTitle>Book your car </StepTitle>
-			<StepDescription>
-        Book your nice car with ease in one single click. 
-			</StepDescription>
-		</StepContainer>
-	</StepsContainer>;
+	return (
+		<StepsContainer>
+			<StepContainer>
+				<StepIcon>
+					<FontAwesomeIcon icon={faMapMarkedAlt} />
+				</StepIcon>
+				<StepTitle>Choose a location</StepTitle>
+				<StepDescription>
+					Find nearest Mycar point and book your car.
+				</StepDescription>
+			</StepContainer>
+			<StepContainer>
+				<StepIcon>
+					<FontAwesomeIcon icon={faCalendarAlt} />
+				</StepIcon>
+				<StepTitle>Pick-up date</StepTitle>
+				<StepDescription>
+					Pickup the best date to rent a car for you.
+				</StepDescription>
+			</StepContainer>
+			<StepContainer>
+				<StepIcon>
+					<FontAwesomeIcon icon={faCarSide} />
+				</StepIcon>
+				<StepTitle>Book your car </StepTitle>
+				<StepDescription>
+					Book your nice car with ease in one single click.
+				</StepDescription>
+			</StepContainer>
+		</StepsContainer>
+	);
 }
