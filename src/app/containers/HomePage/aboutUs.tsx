@@ -35,6 +35,8 @@ const InfoContainer = styled.div`
   ${tw`flex flex-col w-1/2 md:ml-6 2xl:ml-16`}
 `
 
-const Title = styled.h1``
+const Title = styled.h1`
+  ${tw`text-2xl font-extrabold text-black md:text-5xl md:font-black md:leading-normal`}
+`
 
 export function AboutUs(){}
