@@ -46,18 +46,20 @@ const InfoText = styled.div`
 `;
 
 export function AboutUs() {
-	<AboutUsContainer>
-		<CardContainer>
-			<img src={JeepImg} alt="Jeep" />
-		</CardContainer>
-		<InfoContainer>
-			<Title>Have the best experience with our rental deals</Title>
-			<InfoText>
-				We offer a wide variety of vehicles for you to choose from, including
-				sedans, SUVs, vans, and trucks. Our fleet is constantly being updated
-				with the latest models to ensure that you have the best driving
-				experience possible.
-			</InfoText>
-		</InfoContainer>
-	</AboutUsContainer>;
+	return (
+		<AboutUsContainer>
+			<CardContainer>
+				<img src={JeepImg} alt="Jeep" />
+			</CardContainer>
+			<InfoContainer>
+				<Title>Have the best experience with our rental deals</Title>
+				<InfoText>
+					We offer a wide variety of vehicles for you to choose from, including
+					sedans, SUVs, vans, and trucks. Our fleet is constantly being updated
+					with the latest models to ensure that you have the best driving
+					experience possible.
+				</InfoText>
+			</InfoContainer>
+		</AboutUsContainer>
+	);
 }
