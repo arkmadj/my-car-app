@@ -5,3 +5,5 @@ import tw from "twin.macro";
 const AboutUsContainer = styled.div`
   ${tw``}
 `
+
+export function AboutUs(){}
