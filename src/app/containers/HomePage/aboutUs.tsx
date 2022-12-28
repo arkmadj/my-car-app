@@ -40,7 +40,7 @@ const Title = styled.h1`
 `
 
 const InfoText = styled.div`
-  ${tw`max-w-2xl mt-4 text-sm text-gray-500 md:text-base`}
+  ${tw`max-w-2xl mt-4 text-sm font-normal text-gray-500 md:text-base`}
 `
 
 export function AboutUs(){}
