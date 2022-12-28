@@ -31,4 +31,6 @@ const CarContainer = styled.div`
   }
 `
 
+const InfoContainer = styled.div``
+
 export function AboutUs(){}
