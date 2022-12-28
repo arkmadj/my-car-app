@@ -31,6 +31,8 @@ const CarContainer = styled.div`
   }
 `
 
-const InfoContainer = styled.div``
+const InfoContainer = styled.div`
+  ${tw`flex flex-col w-1/2 md:ml-6 2xl:ml-16`}
+`
 
 export function AboutUs(){}
