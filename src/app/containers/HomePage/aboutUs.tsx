@@ -35,4 +35,6 @@ const InfoContainer = styled.div`
   ${tw`flex flex-col w-1/2 md:ml-6 2xl:ml-16`}
 `
 
+const Title = styled.h1``
+
 export function AboutUs(){}
