@@ -12,7 +12,7 @@ const AboutUsContainer = styled.div`
 const CardContainer = styled.div`
 	width: auto;
 	height: 15em;
-	margin-left: -30px;
+	margin-left: -50px;
 
 	img {
 		width: auto;
