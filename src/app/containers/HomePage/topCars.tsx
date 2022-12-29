@@ -16,5 +16,10 @@ const CarsContainer = styled.div`
 `
 
 export function TopCars(){
-  return ()
+  return (
+    <TopCarsContainer>
+      <Title>Explore our top deals</Title>
+      <CarsContainer>  </CarsContainer>
+    </TopCarsContainer>
+  )
 }
