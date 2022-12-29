@@ -39,6 +39,10 @@ const MonthlyPrice = styled.h5`
   ${tw`text-sm font-bold text-gray-500 `}
 `
 
+const SmallIcon = styled.span`
+  ${tw`mr-1 text-sm text-gray-400`}
+`
+
 export function Car(props: ICarProps){
 
 }
