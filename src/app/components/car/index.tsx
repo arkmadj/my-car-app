@@ -31,6 +31,14 @@ const PriceContainer = styled.div`
   ${tw`flex justify-start w-full mt-3`}
 `
 
+const DailyPrice = styled.h5`
+  ${tw`mr-3 text-sm font-bold text-red-500`}
+`
+
+const MonthlyPrice = styled.h5`
+  ${tw`text-sm font-bold text-gray-500 `}
+`
+
 export function Car(props: ICarProps){
 
 }
