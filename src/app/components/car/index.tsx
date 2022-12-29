@@ -43,6 +43,10 @@ const SmallIcon = styled.span`
   ${tw`mr-1 text-sm text-gray-400`}
 `
 
+const CarDetailsContainer = styled.div`
+  ${tw`flex justify-center w-full`}
+`
+
 export function Car(props: ICarProps){
 
 }
