@@ -32,6 +32,11 @@ const PriceContainer = styled.div`
   ${tw`flex justify-start w-full mt-3`}
 `
 
+const SmallText = styled.span`
+  color: inherit;
+  ${tw`text-xs`}
+`
+
 const DailyPrice = styled.h5`
   ${tw`mr-3 text-sm font-bold text-red-500`}
 `
@@ -67,5 +72,7 @@ const RentButton = styled(Button)`
 `
 
 export function Car(props: ICarProps){
+  const {name, thumbnailSrc, dailyPrice, monthlyPrice, mileage, gearType,gas} = props
 
+  return 
 }
