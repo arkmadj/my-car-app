@@ -47,7 +47,9 @@ const CarDetailsContainer = styled.div`
   ${tw`flex justify-center w-full`}
 `
 
-const CarDetail = styled.span``
+const CarDetail = styled.span`
+  ${tw`flex items-center`}
+`
 
 export function Car(props: ICarProps){
 
