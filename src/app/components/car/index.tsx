@@ -23,6 +23,10 @@ const CarThumbnail = styled.div`
   }
 `
 
+const CarName = styled.h3`
+  ${tw`my-1 text-base font-bold text-black`}
+`
+
 export function Car(props: ICarProps){
 
 }
