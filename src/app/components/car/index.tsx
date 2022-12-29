@@ -4,7 +4,7 @@ import { ICar } from "../../../typings/car";
 
 interface ICarProps extends ICar{}
 
-const CardContainer = styled.div``
+const CarContainer = styled.div``
 
 export function Car(props: ICarProps){
 
