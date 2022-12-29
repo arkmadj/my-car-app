@@ -51,6 +51,10 @@ const CarDetail = styled.span`
   ${tw`flex items-center`}
 `
 
+const CarInfo = styled.h6`
+  ${tw`text-xs text-gray-400`}
+`
+
 export function Car(props: ICarProps){
 
 }
