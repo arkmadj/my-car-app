@@ -11,6 +11,8 @@ const Title = styled.h1`
   ${tw`text-3xl font-extrabold text-black lg:text-5xl`}
 `
 
+const CarsContainer = styled.div``
+
 export function TopCars(){
   return ()
 }
