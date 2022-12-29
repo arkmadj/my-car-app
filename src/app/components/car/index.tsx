@@ -27,6 +27,10 @@ const CarName = styled.h3`
   ${tw`my-1 text-base font-bold text-black`}
 `
 
+const PriceContainer = styled.div`
+  ${tw`flex justify-start w-full mt-3`}
+`
+
 export function Car(props: ICarProps){
 
 }
