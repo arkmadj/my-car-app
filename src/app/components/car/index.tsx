@@ -52,7 +52,7 @@ const SmallIcon = styled.span`
 `
 
 const CarDetailsContainer = styled.div`
-  ${tw`flex justify-center w-full`}
+  ${tw`flex w-full justify-evenly`}
 `
 
 const CarDetail = styled.span`
