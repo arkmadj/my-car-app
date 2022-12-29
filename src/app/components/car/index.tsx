@@ -13,6 +13,16 @@ const CarContainer = styled.div`
   ${tw`flex flex-col items-center p-3 pb-4 m-1 bg-white rounded-md sm:m-3 md:m-6`}
 `
 
+const CarThumbnail = styled.div`
+  width: 100%;
+  height: auto;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+`
+
 export function Car(props: ICarProps){
 
 }
