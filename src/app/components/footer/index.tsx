@@ -7,7 +7,6 @@ const FooterContainer = styled.div`
   ${tw`flex flex-wrap min-w-full pb-1 bg-blue-900 pt-7`}
 `
 
-
 export function Footer (){
-  return
+  return <FooterContainer>Container</FooterContainer>
 }
