@@ -21,6 +21,10 @@ const AboutText = styled.p`
 	${tw`max-w-xs mt-5 text-sm font-normal leading-5 text-white`}
 `;
 
+const LinkList = styled.ul`
+  ${tw`flex flex-col list-none outline-none`}
+`
+
 export function Footer() {
 	return (
 		<FooterContainer>
