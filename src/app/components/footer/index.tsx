@@ -21,8 +21,12 @@ const AboutText = styled.p`
 	${tw`max-w-xs mt-5 text-sm font-normal leading-5 text-white`}
 `;
 
-const LinkList = styled.ul`
+const LinksList = styled.ul`
   ${tw`flex flex-col list-none outline-none`}
+`
+
+const HeaderTitle = styled.h3`
+  ${tw`mb-3 text-base font-bold text-white`}
 `
 
 export function Footer() {
