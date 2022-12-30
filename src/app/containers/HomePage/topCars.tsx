@@ -5,6 +5,8 @@ import { ICar } from "../../../typings/car";
 import { Car } from "../../components/car";
 import Carousel, { Dots, slidesToShowPlugin } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
+import { useMediaQuery } from "react-responsive";
+import { SCREENS } from "../../components/responsive";
 
 const TopCarsContainer = styled.div`
 	${tw`flex flex-col items-center justify-center w-full max-w-screen-lg px-4 mb-10 md:px-0`}
@@ -20,6 +22,7 @@ const CarsContainer = styled.div`
 
 export function TopCars() {
 	const [current, setCurrent] = useState(0);
+	const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
 	const testCar: ICar = {
 		name: "Audi S3 Car",
@@ -43,6 +46,18 @@ export function TopCars() {
 		gas: "Petrol",
 	};
 
+	const cars = [
+		<Car {...testCar} />,
+		<Car {...testCar2} />,
+		<Car {...testCar} />,
+		<Car {...testCar2} />,
+		<Car {...testCar} />,
+		<Car {...testCar2} />,
+		<Car {...testCar} />,
+	];
+
+	const numberOfDots = isMobile ? cars.length : Math.ceil(cars.length / 3);
+
 	return (
 		<TopCarsContainer>
 			<Title>Explore our top deals</Title>
@@ -50,15 +65,7 @@ export function TopCars() {
 				<Carousel
 					value={current}
 					onChange={setCurrent}
-					slides={[
-						<Car {...testCar} />,
-						<Car {...testCar2} />,
-						<Car {...testCar} />,
-						<Car {...testCar2} />,
-						<Car {...testCar} />,
-						<Car {...testCar2} />,
-						<Car {...testCar} />,
-					]}
+					slides={cars}
 					plugins={[
 						"clickToChange",
 						{
@@ -91,7 +98,7 @@ export function TopCars() {
 						},
 					}}
 				/>
-				<Dots value={current} onChange={setCurrent} number={2} />
+				<Dots value={current} onChange={setCurrent} number={numberOfDots} />
 				{/* <Car {...testCar}/>
         <Car {...testCar2}/>
         <Car {...testCar}/> */}
