@@ -17,12 +17,22 @@ const AboutContainer = styled.div`
 	${tw`flex flex-col`}
 `;
 
+const AboutText = styled.p`
+	${tw`text-sm font-normal text-white`}
+`;
+
 export function Footer() {
 	return (
 		<FooterContainer>
 			<InnerContainer>
 				<AboutContainer>
 					<Logo color="light" bgColor="dark" />
+					<AboutText>
+						Our car rental company has been in business for over 20 years,
+						providing top-quality rental vehicles to travelers and locals alike.
+						We have a wide range of vehicles to choose from, including economy,
+						luxury, and family-sized options.
+					</AboutText>
 				</AboutContainer>
 			</InnerContainer>
 		</FooterContainer>
