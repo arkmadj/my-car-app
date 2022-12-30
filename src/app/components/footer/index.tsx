@@ -18,7 +18,7 @@ const AboutContainer = styled.div`
 `;
 
 const AboutText = styled.p`
-	${tw`text-sm font-normal text-white`}
+	${tw`max-w-xs mt-5 text-sm font-normal leading-5 text-white`}
 `;
 
 export function Footer() {
