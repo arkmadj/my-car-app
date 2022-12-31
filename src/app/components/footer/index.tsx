@@ -1,7 +1,9 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Logo } from "../logo";
+import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 
 const FooterContainer = styled.div`
 	min-height: 30em;
@@ -41,14 +43,14 @@ const HeaderTitle = styled.h3`
 `
 
 const HorizontalContainer = styled.div`
-  ${tw`flex`}
+  ${tw`flex items-center`}
 `
 
 const RedIcon = styled.span`
-  ${tw`flex items-center justify-center w-5 h-5 mr-2 text-base text-white rounded-full`}
+  ${tw`flex items-center justify-center mr-2 text-base text-white bg-red-500 rounded-full w-9 h-9`}
 `
 
-const SmallText = styled.h3`
+const SmallText = styled.h6`
   ${tw`text-sm text-white`}
 `
 
@@ -87,7 +89,21 @@ export function Footer() {
         </SectionContainer>
         <SectionContainer>
           <HeaderTitle>Call now</HeaderTitle>
-          <HorizontalContainer></HorizontalContainer>
+          <HorizontalContainer>
+            <RedIcon>
+              <FontAwesomeIcon icon={faPhoneAlt}/>
+            </RedIcon>
+            <SmallText>+234 650 8978 0909</SmallText>
+          </HorizontalContainer>
+        </SectionContainer>
+        <SectionContainer>
+          <HeaderTitle>Email</HeaderTitle>
+          <HorizontalContainer>
+            <RedIcon>
+              <FontAwesomeIcon icon={faEnvelope}/>
+            </RedIcon>
+            <SmallText>info@mycar.com</SmallText>
+          </HorizontalContainer>
         </SectionContainer>
 			</InnerContainer>
 		</FooterContainer>
