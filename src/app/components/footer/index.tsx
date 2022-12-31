@@ -15,7 +15,7 @@ const InnerContainer = styled.div`
 `;
 
 const BottomContainer = styled.div`
-  ${tw`flex justify-start w-full max-w-screen-2xl`}
+  ${tw`flex justify-center w-full mt-5 md:justify-start max-w-screen-2xl md:mt-7`}
 `
 
 const CopyrightText = styled.small`
