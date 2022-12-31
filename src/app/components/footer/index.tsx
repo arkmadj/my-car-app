@@ -23,7 +23,7 @@ const AboutText = styled.p`
 `;
 
 const SectionContainer = styled.div`
-  ${tw`flex flex-col min-w-full px-10 mr-2 md:mr-16 md:w-auto md:px-3`}
+  ${tw`flex flex-col w-full px-10 mr-2 md:mr-16 md:w-auto md:px-3`}
 `
 
 const LinksList = styled.ul`
