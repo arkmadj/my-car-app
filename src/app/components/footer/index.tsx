@@ -18,7 +18,10 @@ const BottomContainer = styled.div`
   ${tw`flex`}
 `
 
-const CopyrightText = styled
+const CopyrightText = styled.small`
+  font-size: 11px;
+  ${tw`text-gray-400`}
+`
 
 const AboutContainer = styled.div`
 	${tw`flex flex-col px-10 mr-2 md:mr-16 md:px-3`}
