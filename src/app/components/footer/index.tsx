@@ -7,7 +7,7 @@ import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 
 const FooterContainer = styled.div`
 	background: #1d2124;
-	${tw`flex items-center justify-center min-w-full pt-4 pb-1 md:pt-12`}
+	${tw`flex flex-col items-center justify-center min-w-full pt-4 pb-1 md:pt-12`}
 `;
 
 const InnerContainer = styled.div`
@@ -15,7 +15,7 @@ const InnerContainer = styled.div`
 `;
 
 const BottomContainer = styled.div`
-  ${tw`flex`}
+  ${tw`flex justify-start w-full max-w-screen-2xl`}
 `
 
 const CopyrightText = styled.small`
@@ -114,6 +114,9 @@ export function Footer() {
           </HorizontalContainer>
         </SectionContainer>
 			</InnerContainer>
+      <BottomContainer>
+        <CopyrightText>Copyright 2022 MyCar. All rights reserved</CopyrightText>
+      </BottomContainer>
 		</FooterContainer>
 	);
 }
