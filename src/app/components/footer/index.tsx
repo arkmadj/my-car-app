@@ -48,6 +48,10 @@ const RedIcon = styled.span`
   ${tw`flex items-center justify-center w-5 h-5 mr-2 text-base text-white rounded-full`}
 `
 
+const SmallText = styled.h3`
+  ${tw`text-sm text-white`}
+`
+
 export function Footer() {
 	return (
 		<FooterContainer>
@@ -81,7 +85,10 @@ export function Footer() {
             <LinkItem><a href="#">Terms &amp; conditions</a></LinkItem>
           </LinksList>
         </SectionContainer>
-        <SectionContainer></SectionContainer>
+        <SectionContainer>
+          <HeaderTitle>Call now</HeaderTitle>
+          <HorizontalContainer></HorizontalContainer>
+        </SectionContainer>
 			</InnerContainer>
 		</FooterContainer>
 	);
