@@ -40,6 +40,10 @@ const HeaderTitle = styled.h3`
   ${tw`mb-3 text-xl font-bold text-white`}
 `
 
+const RedIcon = styled.span`
+  ${tw`flex items-center justify-center w-5 h-5 mr-2 text-base text-white rounded-full`}
+`
+
 export function Footer() {
 	return (
 		<FooterContainer>
