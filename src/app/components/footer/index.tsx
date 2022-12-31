@@ -6,17 +6,16 @@ import { Logo } from "../logo";
 import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 
 const FooterContainer = styled.div`
-	min-height: 30em;
 	background: #1d2124;
 	${tw`flex items-center justify-center min-w-full pt-4 pb-1 md:pt-12`}
 `;
 
 const InnerContainer = styled.div`
-	${tw`flex w-full h-full max-w-screen-2xl`}
+	${tw`flex flex-wrap w-full h-full max-w-screen-2xl`}
 `;
 
 const AboutContainer = styled.div`
-	${tw`flex flex-col mr-2 md:mr-16`}
+	${tw`flex flex-col px-10 mr-2 md:mr-16 md:px-3`}
 `;
 
 const AboutText = styled.p`
