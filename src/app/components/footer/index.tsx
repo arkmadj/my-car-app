@@ -14,6 +14,12 @@ const InnerContainer = styled.div`
 	${tw`flex flex-wrap w-full h-full gap-5 max-w-screen-2xl`}
 `;
 
+const BottomContainer = styled.div`
+  ${tw`flex`}
+`
+
+const CopyrightText = styled
+
 const AboutContainer = styled.div`
 	${tw`flex flex-col px-10 mr-2 md:mr-16 md:px-3`}
 `;
