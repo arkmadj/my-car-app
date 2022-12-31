@@ -19,8 +19,8 @@ const BottomContainer = styled.div`
 `
 
 const CopyrightText = styled.small`
-  font-size: 11px;
-  ${tw`text-gray-400`}
+  font-size: 12px;
+  ${tw`text-gray-300`}
 `
 
 const AboutContainer = styled.div`
@@ -115,7 +115,7 @@ export function Footer() {
         </SectionContainer>
 			</InnerContainer>
       <BottomContainer>
-        <CopyrightText>Copyright 2022 MyCar. All rights reserved</CopyrightText>
+        <CopyrightText>Copyright &copy; {new Date().getFullYear()} MyCar. All rights reserved</CopyrightText>
       </BottomContainer>
 		</FooterContainer>
 	);
