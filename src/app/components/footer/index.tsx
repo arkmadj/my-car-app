@@ -11,7 +11,7 @@ const FooterContainer = styled.div`
 `;
 
 const InnerContainer = styled.div`
-	${tw`flex flex-wrap w-full h-full max-w-screen-2xl`}
+	${tw`flex flex-wrap w-full h-full gap-5 max-w-screen-2xl`}
 `;
 
 const AboutContainer = styled.div`
@@ -23,7 +23,7 @@ const AboutText = styled.p`
 `;
 
 const SectionContainer = styled.div`
-  ${tw`flex flex-col mr-2 md:mr-16`}
+  ${tw`flex flex-col min-w-full px-10 mr-2 md:mr-16 md:w-auto md:px-3`}
 `
 
 const LinksList = styled.ul`
