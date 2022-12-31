@@ -10,11 +10,11 @@ const FooterContainer = styled.div`
 `;
 
 const InnerContainer = styled.div`
-	${tw`flex flex-col w-full h-full max-w-screen-2xl`}
+	${tw`flex w-full h-full max-w-screen-2xl`}
 `;
 
 const AboutContainer = styled.div`
-	${tw`flex flex-col`}
+	${tw`flex flex-col mr-2 md:mr-16`}
 `;
 
 const AboutText = styled.p`
@@ -22,7 +22,7 @@ const AboutText = styled.p`
 `;
 
 const SectionContainer = styled.div`
-  ${tw`flex flex-col mr-3`}
+  ${tw`flex flex-col mr-2 md:mr-16`}
 `
 
 const LinksList = styled.ul`
@@ -32,12 +32,12 @@ const LinksList = styled.ul`
 const LinkItem = styled.li`
   ${tw`mb-3`}
   & > a {
-    ${tw`text-sm text-white`}
+    ${tw`text-xs text-white transition-all hover:text-gray-200`}
   }
 `
 
 const HeaderTitle = styled.h3`
-  ${tw`mb-3 text-base font-bold text-white`}
+  ${tw`mb-3 text-xl font-bold text-white`}
 `
 
 export function Footer() {
@@ -53,6 +53,26 @@ export function Footer() {
 						luxury, and family-sized options.
 					</AboutText>
 				</AboutContainer>
+        <SectionContainer>
+          <HeaderTitle>Our links</HeaderTitle>
+          <LinksList>
+            <LinkItem><a href="#">Home</a></LinkItem>
+            <LinkItem><a href="#">About us</a></LinkItem>
+            <LinkItem><a href="#">Services</a></LinkItem>
+            <LinkItem><a href="#">Models</a></LinkItem>
+            <LinkItem><a href="#">Blog</a></LinkItem>
+          </LinksList>
+        </SectionContainer>
+        <SectionContainer>
+          <HeaderTitle>Other links</HeaderTitle>
+          <LinksList>
+            <LinkItem><a href="#">FAQ</a></LinkItem>
+            <LinkItem><a href="#">Contact us</a></LinkItem>
+            <LinkItem><a href="#">Support</a></LinkItem>
+            <LinkItem><a href="#">Privacy policy</a></LinkItem>
+            <LinkItem><a href="#">Terms &amp; conditions</a></LinkItem>
+          </LinksList>
+        </SectionContainer>
 			</InnerContainer>
 		</FooterContainer>
 	);
