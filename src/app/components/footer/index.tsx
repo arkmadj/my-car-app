@@ -81,6 +81,7 @@ export function Footer() {
             <LinkItem><a href="#">Terms &amp; conditions</a></LinkItem>
           </LinksList>
         </SectionContainer>
+        <SectionContainer></SectionContainer>
 			</InnerContainer>
 		</FooterContainer>
 	);
