@@ -62,7 +62,7 @@ export function AboutUs() {
 					that you have the best driving experience possible. All of our
 					vehicles are well-maintained and clean, and we offer a variety of
 					amenities, such as GPS navigation and satellite radio, to make your
-					trip even more enjoyable. 
+					trip even more enjoyable.
 				</InfoText>
 			</InfoContainer>
 		</AboutUsContainer>
