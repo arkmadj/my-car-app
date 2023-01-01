@@ -61,7 +61,7 @@ export function AboutUs() {
 					fleet is constantly being updated with the latest models to ensure
 					that you have the best driving experience possible. All of our
 					vehicles are well-maintained and clean, and we offer a variety of
-					amenities, such as GPS navigation and satellite radio, to maked your
+					amenities, such as GPS navigation and satellite radio, to maker your
 					trip even more enjoyable.
 				</InfoText>
 			</InfoContainer>
