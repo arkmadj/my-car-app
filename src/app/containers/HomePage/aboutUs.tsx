@@ -55,7 +55,7 @@ export function AboutUs() {
 				<Title>Have the best experience with our rental deals</Title>
 				<InfoText>
 					We are proud to offer a wide variety of vehicles for you to choose
-					from, including sedans, SUVs, vans, and trucks. Whether you need a
+					from, including sedans, SUVs, van, and trucks. Whether you need a
 					small car for a quick trip around town or a larger vehicle for a
 					longer road trip, we have something that will meet your needs. Our
 					fleet is constantly being updated with the latest models to ensure
