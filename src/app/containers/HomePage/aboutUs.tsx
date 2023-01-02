@@ -52,7 +52,7 @@ export function AboutUs() {
 				<img src={JeepImg} alt="Jeep" />
 			</CardContainer>
 			<InfoContainer>
-				<Title>Have the best experience with our rental deal</Title>
+				<Title>Have the best experience with our rental deals</Title>
 				<InfoText>
 					We are proud to offer a wide variety of vehicles for you to choose
 					from, including sedans, SUVs, vans, and trucks. Whether you need a
