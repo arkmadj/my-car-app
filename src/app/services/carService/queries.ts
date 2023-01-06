@@ -10,7 +10,7 @@ export const GET_ALL_CARS = gql`
       gas
       thumbnailUrl
       dailyPrice
-      monthlyPrice
+      month
     }
   }
 `
