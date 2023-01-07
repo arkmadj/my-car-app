@@ -1,14 +1,14 @@
-import { gql } from "@apollo/client";
+import { gql } from "@apollo/client"
 
 export const GET_ALL_CARS = gql`
-  query{
+  query GetCa{
     cars{
       id
       name
       mileage
       gearType
       gas
-      thumbnailUrl
+      thumbnailURL
       dailyPrice
       monthlyPrice
     }
