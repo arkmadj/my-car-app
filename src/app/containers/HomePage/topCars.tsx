@@ -10,8 +10,9 @@ import { SCREENS } from "../../components/responsive";
 import carService from "../../services/carService";
 import { GetCars_cars } from "../../services/carService/__generated__/GetCars";
 import { setTopCars } from "./slice";
-import { useDispatch } from "react-redux";
-import { Dispatch } from "@reduxjs/toolkit";
+import { useDispatch, useSelector } from "react-redux";
+import { createSelector, Dispatch } from "@reduxjs/toolkit";
+import { makeSelectTopCars } from "./selectors";
 
 const TopCarsContainer = styled.div`
 	${tw`flex flex-col items-center justify-center w-full max-w-screen-lg px-4 mb-10 md:px-0`}
@@ -29,12 +30,20 @@ const actionDispatch = (dispatch: Dispatch) => ({
 	setTopCars: (cars: GetCars_cars[]) => dispatch(setTopCars(cars)),
 });
 
+const stateSelector = createSelector(makeSelectTopCars, (topCars) => ({
+	topCars,
+}));
+
 export function TopCars() {
 	const [current, setCurrent] = useState(0);
 
 	const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
+	const { topCars } = useSelector(stateSelector);
 	const { setTopCars } = actionDispatch(useDispatch());
+
+
+	console.log({topCars})
 
 	const fetchTopCars = async () => {
 		const cars = await carService.getCars().catch((err) => {
