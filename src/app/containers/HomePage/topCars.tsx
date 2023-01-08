@@ -75,7 +75,12 @@ export function TopCars() {
 		gas: "Petrol",
 	};
 
-	
+	const isEmptyTopCars = !topCars || topCars.length === 0;
+
+	const cars =
+		(!isEmptyTopCars &&
+			topCars.map((car) => <Car {...car} thumbnailSrc={car.thumbnailURL} />)) ||
+		[];
 
 	// const cars = [
 	// 	<Car {...testCar} />,
@@ -88,6 +93,8 @@ export function TopCars() {
 	// ];
 
 	const numberOfDots = isMobile ? cars.length : Math.ceil(cars.length / 3);
+
+	if(isEmptyTopCars) return null
 
 	return (
 		<TopCarsContainer>
