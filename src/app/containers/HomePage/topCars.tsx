@@ -26,6 +26,10 @@ const CarsContainer = styled.div`
 	${tw`flex flex-wrap justify-center w-full mt-7 md:mt-10`}
 `;
 
+const EmptyCars = styled.div`
+	${tw`flex items-center justify-center w-full text-sm text-gray-500`}
+`
+
 const actionDispatch = (dispatch: Dispatch) => ({
 	setTopCars: (cars: GetCars_cars[]) => dispatch(setTopCars(cars)),
 });
@@ -82,24 +86,13 @@ export function TopCars() {
 			topCars.map((car) => <Car {...car} thumbnailSrc={car.thumbnailURL} />)) ||
 		[];
 
-	// const cars = [
-	// 	<Car {...testCar} />,
-	// 	<Car {...testCar2} />,
-	// 	<Car {...testCar} />,
-	// 	<Car {...testCar2} />,
-	// 	<Car {...testCar} />,
-	// 	<Car {...testCar2} />,
-	// 	<Car {...testCar} />,
-	// ];
-
 	const numberOfDots = isMobile ? cars.length : Math.ceil(cars.length / 3);
-
-	if(isEmptyTopCars) return null
 
 	return (
 		<TopCarsContainer>
 			<Title>Explore our top deals</Title>
-			<CarsContainer>
+			{isEmptyTopCars && <EmptyCars>No available cars at the moment</EmptyCars>}
+			{!isEmptyTopCars && <CarsContainer>
 				<Carousel
 					value={current}
 					onChange={setCurrent}
@@ -140,7 +133,7 @@ export function TopCars() {
 				{/* <Car {...testCar}/>
         <Car {...testCar2}/>
         <Car {...testCar}/> */}
-			</CarsContainer>
+			</CarsContainer>}
 		</TopCarsContainer>
 	);
 }
