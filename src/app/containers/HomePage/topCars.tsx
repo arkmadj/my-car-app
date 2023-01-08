@@ -13,6 +13,7 @@ import { setTopCars } from "./slice";
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector, Dispatch } from "@reduxjs/toolkit";
 import { makeSelectTopCars } from "./selectors";
+import { MoonLoader } from "react-spinners";
 
 const TopCarsContainer = styled.div`
 	${tw`flex flex-col items-center justify-center w-full max-w-screen-lg px-4 mb-10 md:px-0`}
@@ -28,7 +29,11 @@ const CarsContainer = styled.div`
 
 const EmptyCars = styled.div`
 	${tw`flex items-center justify-center w-full text-sm text-gray-500`}
-`
+`;
+
+const LoadingContainer = styled.div`
+	${tw`flex items-center justify-center w-full text-base text-black mt-9`}
+`;
 
 const actionDispatch = (dispatch: Dispatch) => ({
 	setTopCars: (cars: GetCars_cars[]) => dispatch(setTopCars(cars)),
@@ -38,8 +43,10 @@ const stateSelector = createSelector(makeSelectTopCars, (topCars) => ({
 	topCars,
 }));
 
+
 export function TopCars() {
 	const [current, setCurrent] = useState(0);
+	const [isLoading, setLoading] = useState(false);
 
 	const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
@@ -47,9 +54,10 @@ export function TopCars() {
 	const { setTopCars } = actionDispatch(useDispatch());
 
 	const fetchTopCars = async () => {
-		const cars = await carService.getCars().catch((err) => {
-		});
+		setLoading(true);
+		const cars = await carService.getCars().catch((err) => {});
 		if (cars) setTopCars(cars);
+		setLoading(false);
 	};
 
 	useEffect(() => {
@@ -90,49 +98,58 @@ export function TopCars() {
 	return (
 		<TopCarsContainer>
 			<Title>Explore our top deals</Title>
-			{isEmptyTopCars && <EmptyCars>No available cars at the moment</EmptyCars>}
-			{!isEmptyTopCars && <CarsContainer>
-				<Carousel
-					value={current}
-					onChange={setCurrent}
-					slides={cars}
-					plugins={[
-						"clickToChange",
-						{
-							resolve: slidesToShowPlugin,
-							options: {
-								numberOfSlides: 3,
+			{isLoading && (
+				<LoadingContainer>
+					<MoonLoader loading size={20}/>
+				</LoadingContainer>
+			)}
+			{isEmptyTopCars && !isLoading && (
+				<EmptyCars>No available cars at the moment</EmptyCars>
+			)}
+			{!isEmptyTopCars && !isLoading && (
+				<CarsContainer>
+					<Carousel
+						value={current}
+						onChange={setCurrent}
+						slides={cars}
+						plugins={[
+							"clickToChange",
+							{
+								resolve: slidesToShowPlugin,
+								options: {
+									numberOfSlides: 3,
+								},
 							},
-						},
-					]}
-					breakpoints={{
-						640: {
-							plugins: [
-								{
-									resolve: slidesToShowPlugin,
-									options: {
-										numberOfSlides: 1,
+						]}
+						breakpoints={{
+							640: {
+								plugins: [
+									{
+										resolve: slidesToShowPlugin,
+										options: {
+											numberOfSlides: 1,
+										},
 									},
-								},
-							],
-						},
-						900: {
-							plugins: [
-								{
-									resolve: slidesToShowPlugin,
-									options: {
-										numberOfSlides: 2,
+								],
+							},
+							900: {
+								plugins: [
+									{
+										resolve: slidesToShowPlugin,
+										options: {
+											numberOfSlides: 2,
+										},
 									},
-								},
-							],
-						},
-					}}
-				/>
-				<Dots value={current} onChange={setCurrent} number={numberOfDots} />
-				{/* <Car {...testCar}/>
+								],
+							},
+						}}
+					/>
+					<Dots value={current} onChange={setCurrent} number={numberOfDots} />
+					{/* <Car {...testCar}/>
         <Car {...testCar2}/>
         <Car {...testCar}/> */}
-			</CarsContainer>}
+				</CarsContainer>
+			)}
 		</TopCarsContainer>
 	);
 }
