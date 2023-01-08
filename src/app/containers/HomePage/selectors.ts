@@ -1,6 +1,7 @@
 import { createSelector } from "reselect";
+import { IRootAppState } from "../../../typings";
 
-const selectHomePage = (state: any) => {
+const selectHomePage = (state: IRootAppState) => {
 	return state.homePage;
 };
 
