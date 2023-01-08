@@ -42,15 +42,10 @@ export function TopCars() {
 	const { topCars } = useSelector(stateSelector);
 	const { setTopCars } = actionDispatch(useDispatch());
 
-
-	console.log({topCars})
-
 	const fetchTopCars = async () => {
 		const cars = await carService.getCars().catch((err) => {
 			console.log("Error: ", err);
 		});
-
-		console.log("Cars: ", cars);
 		if (cars) setTopCars(cars);
 	};
 
@@ -80,15 +75,17 @@ export function TopCars() {
 		gas: "Petrol",
 	};
 
-	const cars = [
-		<Car {...testCar} />,
-		<Car {...testCar2} />,
-		<Car {...testCar} />,
-		<Car {...testCar2} />,
-		<Car {...testCar} />,
-		<Car {...testCar2} />,
-		<Car {...testCar} />,
-	];
+	
+
+	// const cars = [
+	// 	<Car {...testCar} />,
+	// 	<Car {...testCar2} />,
+	// 	<Car {...testCar} />,
+	// 	<Car {...testCar2} />,
+	// 	<Car {...testCar} />,
+	// 	<Car {...testCar2} />,
+	// 	<Car {...testCar} />,
+	// ];
 
 	const numberOfDots = isMobile ? cars.length : Math.ceil(cars.length / 3);
 
