@@ -48,7 +48,6 @@ export function TopCars() {
 
 	const fetchTopCars = async () => {
 		const cars = await carService.getCars().catch((err) => {
-			console.log("Error: ", err);
 		});
 		if (cars) setTopCars(cars);
 	};
